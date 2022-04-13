@@ -123,4 +123,25 @@ class LayananDesaController extends Controller
             return response()->json(['status' => false, 'message' => 'error' ]);
         }
     }
+
+    public function getSurat(request $request)
+    {
+        $desa = verif_desa($request->kode_desa);
+        if (!$desa) 
+            return response()->json(['status' => false, 'message' => 'Desa tidak terdaftar' ]);
+
+        try {
+            $layanan = LayananSuratDesa::where([
+                'data_desa_id' => $desa->id,
+                'setujui' => 1,
+                'id_sid' => (int) $request->id
+                ])
+                ->first();
+            $path = storage_path('app/'.$layanan->path);
+            return response()->download($path);
+        } catch (Exception $e) {
+            report($e);
+            return response()->json(['status' => false, 'message' => $e ]);
+        }
+    }
 }
