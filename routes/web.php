@@ -37,9 +37,9 @@ use Illuminate\Support\Facades\Route;
 
 // Redirect if apps not installed
 Route::group(['middleware' => 'installed'], function () {
-    Auth::routes([
-        'register' => false,
-    ]);
+    // Auth::routes([
+    //     'register' => false,
+    // ]);
 
     /**
      * Group Routing for Halaman Website

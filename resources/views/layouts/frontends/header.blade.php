@@ -81,7 +81,7 @@
             </ul>
           </li>
           <li><a href="{{ route('faq')}}">FAQ</a></li>
-          @if (auth()->guest())
+          {{-- @if (auth()->guest())
             <li><a href="{{ route('login') }}">LOGIN<span class="sr-only">(current)</span></a></li>
           @else
           <li><a href="{{ route('dashboard')}}">ADMIN</a></li>
@@ -89,7 +89,7 @@
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
           </form>
-          @endif
+          @endif --}}
         </ul>
       </div>
     </nav>
