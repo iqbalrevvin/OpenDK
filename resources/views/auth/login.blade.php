@@ -92,9 +92,9 @@
 
             <hr />
             <div class="text-center">
-                <small>Hak Cipta &copy; 2017 <a href="http://www.kompak.or.id">KOMPAK</a>, 2018-{{ date('Y') }} <a href="http://opendesa.id">OpenDesa</a>
+                <small>&copy; {{ date('Y') }} <a href="https://innovaplus.tech">Innovaplus Tech</a>, 2018-{{ date('Y') }} <a href="https://github.com/openSID/openDK">OpenDK</a>
                     <br />
-                    <b><a href="https://github.com/openSID/openDK" target="_blank">OpenDK</a></b> {{ config('app.version') }}
+                    <b><a href="/" target="_blank">SmartTakida</a></b> {{ config('app.version') }}
                 </small>
             </div>
         </div>

@@ -14,8 +14,8 @@
 <header class="main-header">
     <!-- Logo -->
     <a href="{{ $app->make('url')->to('/') }}" target="_blank" class="logo">
-        <span class="logo-mini"><b>DK</b></span>
-        <span class="logo-lg"><b>OpenDK</b></span>
+        <span class="logo-mini"><b>SMT</b></span>
+        <span class="logo-lg"><b>SmartTakida</b></span>
     </a>
     <!-- Header Navbar -->
     @if (Auth::guest())
