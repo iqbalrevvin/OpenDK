@@ -42,7 +42,7 @@
     @stack('css')
     <link rel="stylesheet" href="{{ asset('/css/slider.css') }}">
     <link rel="stylesheet" href="{{ asset('/bower_components/admin-lte/dist/css/AdminLTE.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/bower_components/admin-lte/dist/css/skins/skin-blue.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bower_components/admin-lte/dist/css/skins/skin-red.min.css') }}">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="{{ asset('/css/swiper.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('/css/custom.css') }}">
@@ -52,7 +52,7 @@
     <script src="{{ asset('/bower_components/jquery/dist/jquery.min.js') }}"></script>
 </head>
 
-<body class="hold-transition skin-blue layout-top-nav">
+<body class="hold-transition skin-red layout-top-nav">
     @include('components.preloader')
     <!-- overlay !-->
     <div class="wrapper">
