@@ -90,8 +90,8 @@ class SinergiProgramController extends Controller
     public function create()
     {
         $sinergi = null;
-        $page_title = 'Sinergi Program';
-        $page_description = 'Tambah Sinergi Program';
+        $page_title = 'Sinergi Program (CCTV)';
+        $page_description = 'Tambah Sinergi Program (CCTV)';
 
         return view('informasi.sinergi_program.create', compact('page_title', 'page_description', 'sinergi'));
     }
@@ -117,10 +117,10 @@ class SinergiProgramController extends Controller
         } catch (\Exception $e) {
             report($e);
 
-            return back()->with('error', 'Sinergi Program gagal disimpan!');
+            return back()->with('error', 'Sinergi Program (CCTV) gagal disimpan!');
         }
 
-        return redirect()->route('informasi.sinergi-program.index')->with('success', 'Sinergi Program berhasil disimpan!');
+        return redirect()->route('informasi.sinergi-program.index')->with('success', 'Sinergi Program (CCTV) berhasil disimpan!');
     }
 
     /**
@@ -132,8 +132,8 @@ class SinergiProgramController extends Controller
     public function edit($id)
     {
         $sinergi = SinergiProgram::findOrFail($id);
-        $page_title = 'Sinergi Program';
-        $page_description = 'Ubah Sinergi Program : '.$sinergi->nama;
+        $page_title = 'Sinergi Program (CCTV)';
+        $page_description = 'Ubah Sinergi Program (CCTV) : '.$sinergi->nama;
 
         return view('informasi.sinergi_program.edit', compact('page_title', 'page_description', 'sinergi'));
     }
@@ -165,10 +165,10 @@ class SinergiProgramController extends Controller
         } catch (\Exception $e) {
             report($e);
 
-            return back()->withInput()->with('error', 'Sinergi Program gagal diubah!');
+            return back()->withInput()->with('error', 'Sinergi Program (CCTV) gagal diubah!');
         }
 
-        return redirect()->route('informasi.sinergi-program.index')->with('success', 'Sinergi Program berhasil diubah!');
+        return redirect()->route('informasi.sinergi-program.index')->with('success', 'Sinergi Program (CCTV) berhasil diubah!');
     }
 
     /**
@@ -187,10 +187,10 @@ class SinergiProgramController extends Controller
         } catch (\Exception $e) {
             report($e);
 
-            return redirect()->route('informasi.sinergi-program.index')->with('error', 'Sinergi Program gagal dihapus!');
+            return redirect()->route('informasi.sinergi-program.index')->with('error', 'Sinergi Program (CCTV) gagal dihapus!');
         }
 
-        return redirect()->route('informasi.sinergi-program.index')->with('success', 'Sinergi Program berhasil dihapus!');
+        return redirect()->route('informasi.sinergi-program.index')->with('success', 'Sinergi Program (CCTV) berhasil dihapus!');
     }
 
     /**

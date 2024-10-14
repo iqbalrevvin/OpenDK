@@ -8,7 +8,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Sinergi Program</li>
+            <li class="active">Sinergi Program (CCTV)</li>
         </ol>
     </section>
 

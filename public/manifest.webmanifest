@@ -1,9 +1,9 @@
 {
-	"name": "openDK",
-	"short_name": "openDK",
+	"name": "Sistem Kecamatan Tarogong Kidul",
+	"short_name": "SmartTakida",
 	"start_url": "/",
 	"display": "standalone",
-	"description": "Website Kecamatan ",
+	"description": "Sistem Informasi Kecamatan Tarogong Kidul",
 	"background_color": "#1a2035",
 	"theme_color": "#1a2035",
 	"icons": [
@@ -26,11 +26,11 @@
 	],
 	"shortcuts": [
 		{
-		  "name": "openDK",
-		  "short_name": "openDK",
-		  "description": "website kecamatan",
-		  "url": "/profil/",
-		  "icons": [{ "src": "icon/favicon-96x96.png", "sizes": "96x96" }]
+		  	"name": "Sistem Kecamatan Tarogong Kidul",
+			"short_name": "SmartTakida",
+		  	"description": "Sistem Informasi Kecamatan Tarogong Kidul",
+		  	"start_url": "/",
+		  	"icons": [{ "src": "icon/favicon-96x96.png", "sizes": "96x96" }]
 		}
 	]
 }

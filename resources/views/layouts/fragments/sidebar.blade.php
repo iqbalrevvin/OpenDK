@@ -25,6 +25,11 @@
                         </a>
                     </li>
                 @endif
+                <li class="">
+                    <a target="_blank" href="https://www.bnpb.go.id/berita/bpbd-kab-garut" title="BPBD Garut">
+                        <i class="fa fa-external-link"></i><span>BPBD Garut</span>
+                    </a>
+                </li>
 
                 @if ($user->hasrole(['super-admin', 'admin-kecamatan', 'administrator-website', 'kontributor-artikel']))
                     <li class="treeview {{ Request::is(['informasi/*']) ? 'active' : '' }}">
@@ -74,7 +79,7 @@
                             @endrole
                             @role('super-admin|admin-kecamatan|administrator-website')
                                 <li {{ Request::is(['informasi/sinergi-program*']) ? 'class=active' : '' }}>
-                                    <a href="{{ route('informasi.sinergi-program.index') }}"><i class="fa fa-circle-o"></i>Sinergi Program</a>
+                                    <a href="{{ route('informasi.sinergi-program.index') }}"><i class="fa fa-circle-o"></i>Sinergi Program (CCTV)</a>
                                 </li>
                             @endrole
                         </ul>

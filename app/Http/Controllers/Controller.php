@@ -157,51 +157,51 @@ class Controller extends BaseController
             return;
         }
 
-        if (cache()->get('track') != null && cache()->get('track') == date('Y m d')) {
-            return;
-        }
+        // if (cache()->get('track') != null && cache()->get('track') == date('Y m d')) {
+        //     return;
+        // }
 
-        $host_pantau = config('app.host_pantau');
-        $data = [
-            'url' => url('/'),
-            'versi' => config('app.version'),
-            'jml_desa' => DataDesa::count(),
-            'desa' => json_encode(DataDesa::select(['desa_id', 'nama', 'sebutan_desa', 'path', 'website'])->get()),
-            'jumlahdesa_sinkronisasi' => DataDesa::count(),
-            'jumlah_penduduk' => Penduduk::where('status_dasar', 1)->count(),
-            'jumlah_keluarga' => Keluarga::count(),
-            'peta_wilayah' => $this->umum->path ?? '[[[[]]]]',
-            'batas_wilayah' => json_encode([
-                'bts_wil_utara' => $this->umum->bts_wil_utara,
-                'bts_wil_timur' => $this->umum->bts_wil_timur,
-                'bts_wil_selatan' => $this->umum->bts_wil_selatan,
-                'bts_wil_barat' => $this->umum->bts_wil_barat,
-            ]),
-            'sebutan_wilayah' => $this->sebutan_wilayah,
-            'alamat' => $this->profil->alamat,
-            'jumlah_bantuan' => Program::count(),
-            'kode_kecamatan' => $this->profil->kecamatan_id,
-            'kode_kabupaten' => $this->profil->kabupaten_id,
-            'kode_provinsi' => $this->profil->provinsi_id,
-            'nama_kecamatan' => $this->profil->nama_kecamatan,
-            'nama_kabupaten' => $this->profil->nama_kabupaten,
-            'nama_provinsi' => $this->profil->nama_provinsi,
-            'nama_camat' => $this->nama_camat,
-            'lat' => $this->umum->lat,
-            'lng' => $this->umum->lng,
-        ];
+        // $host_pantau = config('app.host_pantau');
+        // $data = [
+        //     'url' => url('/'),
+        //     'versi' => config('app.version'),
+        //     'jml_desa' => DataDesa::count(),
+        //     'desa' => json_encode(DataDesa::select(['desa_id', 'nama', 'sebutan_desa', 'path', 'website'])->get()),
+        //     'jumlahdesa_sinkronisasi' => DataDesa::count(),
+        //     'jumlah_penduduk' => Penduduk::where('status_dasar', 1)->count(),
+        //     'jumlah_keluarga' => Keluarga::count(),
+        //     'peta_wilayah' => $this->umum->path ?? '[[[[]]]]',
+        //     'batas_wilayah' => json_encode([
+        //         'bts_wil_utara' => $this->umum->bts_wil_utara,
+        //         'bts_wil_timur' => $this->umum->bts_wil_timur,
+        //         'bts_wil_selatan' => $this->umum->bts_wil_selatan,
+        //         'bts_wil_barat' => $this->umum->bts_wil_barat,
+        //     ]),
+        //     'sebutan_wilayah' => $this->sebutan_wilayah,
+        //     'alamat' => $this->profil->alamat,
+        //     'jumlah_bantuan' => Program::count(),
+        //     'kode_kecamatan' => $this->profil->kecamatan_id,
+        //     'kode_kabupaten' => $this->profil->kabupaten_id,
+        //     'kode_provinsi' => $this->profil->provinsi_id,
+        //     'nama_kecamatan' => $this->profil->nama_kecamatan,
+        //     'nama_kabupaten' => $this->profil->nama_kabupaten,
+        //     'nama_provinsi' => $this->profil->nama_provinsi,
+        //     'nama_camat' => $this->nama_camat,
+        //     'lat' => $this->umum->lat,
+        //     'lng' => $this->umum->lng,
+        // ];
 
-        try {
-            $response = Http::withHeaders([
-                'token' => config('app.token_pantau'),
-            ])->post($host_pantau.'track/opendk?token='.config('app.token_pantau'), $data);
-            cache()->put('track', date('Y m d'), 60 * 60 * 24);
+        // try {
+        //     $response = Http::withHeaders([
+        //         'token' => config('app.token_pantau'),
+        //     ])->post($host_pantau.'track/opendk?token='.config('app.token_pantau'), $data);
+        //     cache()->put('track', date('Y m d'), 60 * 60 * 24);
 
-            return;
-        } catch (Exception $e) {
-            Log::notice($e);
+        //     return;
+        // } catch (Exception $e) {
+        //     Log::notice($e);
 
-            return;
-        }
+        //     return;
+        // }
     }
 }

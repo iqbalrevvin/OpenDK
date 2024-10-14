@@ -1,5 +1,5 @@
 <div class="box-header with-border text-center  bg-blue">
-    <h2 class="box-title text-bold">Sinergi Program</h2>
+    <h2 class="box-title text-bold">Sinergi Program (CCTV)</h2>
 </div>
 <div class="row" style="margin: 0">
     @foreach ($sinergi as $key => $data)

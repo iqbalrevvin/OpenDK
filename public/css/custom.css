@@ -905,7 +905,7 @@ x-sign:nth-of-type(5) {
 
 .logo-sinergi-program {
 	width: 170px;
-	height: 90px;
+	height: auto;
 	object-fit: cover;
 	object-position: center;
 }
